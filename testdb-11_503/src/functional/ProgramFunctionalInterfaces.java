@@ -9,6 +9,8 @@ import java.util.stream.Stream;
 
 public class ProgramFunctionalInterfaces {
     public static void main(String[] args) {
+        // Функциональный интерфейс Function<T, R>
+        // принимает один аргумент типа T и возвращает результат типа R.
         Function<String, Integer> countFunction = s -> {
             int count = 0;
             for (int i = 0; i < s.length(); i++) {
@@ -19,6 +21,8 @@ public class ProgramFunctionalInterfaces {
             return count;
         };
 
+        // Функциональный интерфейс, который принимает один аргумент
+        // и возвращает логическое значение типа boolean.
         Predicate<Integer> numberPredicate = number -> number % 2 == 1;
 
         Consumer<Integer> printNumber = System.out::println;
